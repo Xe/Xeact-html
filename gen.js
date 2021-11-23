@@ -29,7 +29,7 @@ console.log(`const $tl = (kind) => (text, attrs = {}, children = []) => {
 [
     "hl",
     "br",
-].forEach((tag) => console.log(`export const ${tag} = h("${tag}");`));
+].forEach((tag) => console.log(`export const ${tag} = () => h("${tag}");`));
 
 console.log(`export const img = (src, alt="") => h("img", {src, alt});`);
 console.log(`export const ahref = (href, text) => h("a", {href}, t(text));`);
