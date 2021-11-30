@@ -15,7 +15,6 @@ console.log(`const $tl = (kind) => (text, attrs = {}, children = []) => {
     "b",
     "i",
     "u",
-    "span",
     "li",
     "dd",
     "dt",
