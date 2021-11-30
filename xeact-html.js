@@ -13,8 +13,6 @@ export const p = $tl("p");
 export const b = $tl("b");
 export const i = $tl("i");
 export const u = $tl("u");
-export const span = $tl("span");
-export const li = $tl("li");
 export const dd = $tl("dd");
 export const dt = $tl("dt");
 export const del = $tl("del");
@@ -29,7 +27,8 @@ export const ahref = (href, text) => h("a", {href}, t(text));
 const $dl = (kind) => (attrs = {}, children = []) => h(kind, attrs, children);
 export const span = $dl("span");
 export const div = $dl("div");
+export const ul = $dl("ul");
 export const iframe = (src, attrs = {}) => {
-    attrs[src] = src;
+    attrs["src"] = src;
     return h("iframe", attrs);
 };

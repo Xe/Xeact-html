@@ -15,7 +15,6 @@ console.log(`const $tl = (kind) => (text, attrs = {}, children = []) => {
     "b",
     "i",
     "u",
-    "li",
     "dd",
     "dt",
     "del",
@@ -37,10 +36,11 @@ console.log(`const $dl = (kind) => (attrs = {}, children = []) => h(kind, attrs,
 
 [
     "span",
-    "div"
+    "div",
+    "ul"
 ].forEach((tag) => console.log(`export const ${tag} = $dl("${tag}");`));
 
 console.log(`export const iframe = (src, attrs = {}) => {
-    attrs[src] = src;
+    attrs["src"] = src;
     return h("iframe", attrs);
 };`);
